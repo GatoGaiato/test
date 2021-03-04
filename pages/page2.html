@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <section id="first">
+  </section>
+  <section id="second">
+    <ul>
+      <li>A</li>
+      <li>B</li>
+      <li>C</li>
+    </ul>
+    <script>
+      const i = document.createNodeIterator(document.body, NodeFilter.SHOW_ELEMENT, {
+        acceptNode(node) {
+          return node === node ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT //.nodeName?.toLowerCase() === 'p' ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
+        }
+      });
+      const pars = [];
+      let currentNode;
+
+      while (currentNode = i.nextNode()) {
+        pars.push(currentNode);
+      }
+
+      const h = document.createElement('h1')
+      const t = document.createTextNode('hello!')
+      h.append(t)
+      document.body.append(h)
+
+
+      console.log(pars);
+    </script>
+  </section>
+</body>
+
+</html>

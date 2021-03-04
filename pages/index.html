@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Jogo da velha 2038 - por Gato Gaiato</title>
+</head>
+
+<body>
+  <section>
+    <h1>Jogo da velha 2038 - Gato Gaiato edition</h1>
+    <output id="info"></output>
+    <div class="gamePreview"></div><br><br>
+    <a href='./page2.html'>Page 2</a>
+    <fieldset>
+      <legend>Players</legend>
+      <label>Player 1</label><br>
+      <input id="P1" type="text" value="Digite o nome do jogador 1"><br>
+      <label>Player 2</label><br>
+      <input id="P2" type="text" value="Digite o nome do jogador 2">
+    </fieldset>
+  </section>
+  <!----------------------------- scripts ----------------------------------->
+  <script src="https://unpkg.com/@popperjs/core@2.8.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"
+    integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG"
+    crossorigin="anonymous"></script>
+  <script src="./js/app2.js"></script>
+  <script>
+    const rules = {
+      mode: 1,
+      players: [{ name: 'Gaiato', symbol: 'X' }, { name: 'Gaiata', symbol: 'O' }]
+    };
+    const view = document.querySelector('.gamePreview');
+    // game.init(view, rules);
+    Init(view, rules);
+  </script>
+</body>
+
+</html>

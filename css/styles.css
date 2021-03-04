@@ -1,0 +1,22 @@
+.gamePreview {
+  width: 600;
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  background-color:darkolivegreen;
+}
+.gamePreview > div {
+  text-align: center;
+  color: darkkhaki;
+  cursor: pointer;
+  background-color: rgb(59, 10, 10);
+  margin:5px;
+  padding: 20px;
+}
+.gamePreview > div:hover {
+  background-color: brown;
+  border-color: #dc143c;
+  border-radius: 10px;
+}
+#resetBTN {
+  cursor:pointer
+}
